@@ -6,4 +6,11 @@
   <p class="lead">
     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
   </p>
+  <p>
+    <a class="nav-link">{{nombreUsuario}}</a>
+  </p>
+  <p class="lead" *ngIf="isLogin">
+    <img src="{{fotoUsuario}}" class="rounded-circle">
+    <span class="badge pill badge-secondary">{{emailUsuario}}</span>
+  </p>
 </div>
