@@ -17,6 +17,10 @@ export class AuthService {
     public afAuth: AngularFireAuth
   ) { }
 
+  loginFacebook() {
+    return this.afAuth.auth.signInWithPopup(new firabase.auth.FacebookAuthProvider());
+  }
+
   loginGoogle() {
     /*this.getAuth().subscribe(auth => {
       this.emailUsuario = auth.email;
