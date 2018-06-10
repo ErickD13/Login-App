@@ -17,6 +17,10 @@ export class AuthService {
     public afAuth: AngularFireAuth
   ) { }
 
+  loginTwitter () {
+    return this.afAuth.auth.signInWithPopup( new firabase.auth.TwitterAuthProvider());
+  }
+
   loginFacebook() {
     return this.afAuth.auth.signInWithPopup(new firabase.auth.FacebookAuthProvider());
   }
